@@ -1,0 +1,5 @@
+node_modules
+.npm
+.config
+.ash_history
+.node_repl_history
