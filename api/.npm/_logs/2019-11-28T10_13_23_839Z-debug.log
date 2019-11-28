@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bodyParser'
+1 verbose cli ]
+2 info using npm@6.12.0
+3 info using node@v12.13.0
+4 verbose config Skipping project config: /root/.npmrc. (matches userconfig)
+5 verbose npm-session f0bfa70515b0e2b4
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 http fetch GET 404 https://registry.npmjs.org/bodyParser 671ms
+9 http fetch GET 404 https://registry.npmjs.org/bodyParser 564ms
+10 silly fetchPackageMetaData error for bodyParser@latest 404 Not Found - GET https://registry.npmjs.org/bodyParser - Not found
+11 timing stage:rollbackFailedOptional Completed in 0ms
+12 timing stage:runTopLevelLifecycles Completed in 1932ms
+13 verbose stack Error: 404 Not Found - GET https://registry.npmjs.org/bodyParser - Not found
+13 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-fetch/check-response.js:104:15
+13 verbose stack     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+14 verbose statusCode 404
+15 verbose pkgid bodyParser@latest
+16 verbose cwd /root
+17 verbose Linux 4.9.184-linuxkit
+18 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "bodyParser"
+19 verbose node v12.13.0
+20 verbose npm  v6.12.0
+21 error code E404
+22 error 404 Not Found - GET https://registry.npmjs.org/bodyParser - Not found
+23 error 404
+24 error 404 'bodyParser@latest' is not in the npm registry.
+25 error 404 Your package name is not valid, because
+26 error 404 1. name can no longer contain capital letters
+27 error 404 Note that you can also install from a
+28 error 404 tarball, folder, http url, or git url.
+29 verbose exit [ 1, true ]

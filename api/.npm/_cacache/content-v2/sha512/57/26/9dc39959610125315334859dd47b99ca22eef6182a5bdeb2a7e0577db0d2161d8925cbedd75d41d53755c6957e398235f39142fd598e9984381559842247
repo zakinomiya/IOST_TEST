@@ -1,0 +1,1 @@
+{"versions":{"0.0.1":{"name":"logger","version":"0.0.1","_hasShrinkwrap":false,"directories":{},"dist":{"shasum":"cb08171f8a6f6f674b8499dadf50bed4befb72c4","tarball":"https://registry.npmjs.org/logger/-/logger-0.0.1.tgz"},"engines":{"node":">=0.1.90"}}},"name":"logger","dist-tags":{"latest":"0.0.1"}}

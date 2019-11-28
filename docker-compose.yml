@@ -1,0 +1,38 @@
+version: '2'
+
+networks:
+  test:
+
+services:
+
+######## IOST network ######## 
+
+  iostnode:
+    image: iostio/iost-node
+    container_name: test-node
+    ports:
+      - "30000-30003:30000-30003"
+    command: iserver -f /var/lib/iserver/iserver.yml 2>&1
+    environment:
+      - ADMINKEY=2yquS3ySrGWPEKywCPzX4RTJugqRh7kJSo5aehsLYPEWkUxBWA39oMrZ7ZxuM4fgyXYs2cPwh5n8aNNpH5x2VyK1
+      - ADMINNAME=admin
+    volumes:
+      - ./sc:/root/sc
+    networks:
+      - test
+
+
+  api:
+    container_name: api
+    image: node:lts-alpine
+    tty: true
+    working_dir: /root/
+    environment:
+      - ADMINKEY=2yquS3ySrGWPEKywCPzX4RTJugqRh7kJSo5aehsLYPEWkUxBWA39oMrZ7ZxuM4fgyXYs2cPwh5n8aNNpH5x2VyK1
+      - RPC="localhost:30001"
+    volumes:
+        - ./api:/root/
+    networks:
+        - test
+    ports: 
+        - 3000:3000
